@@ -33,6 +33,7 @@ Complete the given below task to finish this assignment.
 ## Requirements
 
 confluent-kafka[avro,json,protobuf]
+
 python 3 & Above
 
 ## 🚀 About Me
