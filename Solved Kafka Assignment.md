@@ -2,9 +2,15 @@
 
 ![Setup_Account/Login](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/Setup-Login%20Kafka%20Account.JPG?raw=true)
 
-2. Create one kafka topic named as "restaurent-take-away-data" with 3 partitions
+
+
+
+2. Create one kafka topic named as "restaurant-take-away-data" with 3 partitions
 
 ![Setup_Account/Login](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/Topic%20creation%20with%203%20partitions.JPG?raw=true)
+
+
+
 
 3. Setup key (string) & value (json) schema in the confluent schema registr
 
