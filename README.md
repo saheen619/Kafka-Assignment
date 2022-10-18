@@ -30,7 +30,10 @@ Complete the given below task to finish this assignment.
 7. Once above questions are done, write another kafka consumer to read data from kafka topic and from the consumer code create one csv file "output.csv"
    and append consumed records output.csv file
 
+## Requirements
 
+confluent-kafka[avro,json,protobuf]
+python 3 & Above
 
 ## 🚀 About Me
 I'm Saheen AHZAN. 
