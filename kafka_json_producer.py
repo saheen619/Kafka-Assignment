@@ -25,7 +25,7 @@ def sasl_conf():
 
     sasl_conf = {'sasl.mechanism': SSL_MACHENISM,
                  # Set to SASL_SSL to enable TLS support.
-                #  'security.protocol': 'SASL_PLAINTEXT'}
+                 # 'security.protocol': 'SASL_PLAINTEXT'}
                 'bootstrap.servers':BOOTSTRAP_SERVER,
                 'security.protocol': SECURITY_PROTOCOL,
                 'sasl.username': API_KEY,
@@ -43,7 +43,7 @@ def schema_config():
     }
 
 
-class Car:   
+class Order:   
     def __init__(self,record:dict):
         for k,v in record.items():
             setattr(self,k,v)
@@ -52,22 +52,22 @@ class Car:
    
     @staticmethod
     def dict_to_car(data:dict,ctx):
-        return Car(record=data)
+        return Order(record=data)
 
     def __str__(self):
         return f"{self.record}"
 
 
-def get_car_instance(file_path):
+def get_order_instance(file_path):
     df=pd.read_csv(file_path)
     df=df.iloc[:,1:]
     cars:List[Car]=[]
     for data in df.values:
-        car=Car(dict(zip(columns,data)))
-        cars.append(car)
-        yield car
+        order=Order(dict(zip(columns,data)))
+        orders.append(order)
+        yield order
 
-def car_to_dict(car:Car, ctx):
+def order_to_dict(order:Order, ctx):
     """
     Returns a dict representation of a User instance for serialization.
     Args:
@@ -79,7 +79,7 @@ def car_to_dict(car:Car, ctx):
     """
 
     # User._address must not be serialized; omit from dict
-    return car.record
+    return order.record
 
 
 def delivery_report(err, msg):
@@ -167,7 +167,7 @@ def main(topic):
     schema_registry_client = SchemaRegistryClient(schema_registry_conf)
 
     string_serializer = StringSerializer('utf_8')
-    json_serializer = JSONSerializer(schema_str, schema_registry_client, car_to_dict)
+    json_serializer = JSONSerializer(schema_str, schema_registry_client, order_to_dict)
 
     producer = Producer(sasl_conf())
 
@@ -176,12 +176,12 @@ def main(topic):
         # Serve on_delivery callbacks from previous calls to produce()
     producer.poll(0.0)
     try:
-        for car in get_car_instance(file_path=FILE_PATH):
+        for order in get_order_instance(file_path=FILE_PATH):
 
-            print(car)
+            print(order)
             producer.produce(topic=topic,
-                            key=string_serializer(str(uuid4()), car_to_dict),
-                            value=json_serializer(car, SerializationContext(topic, MessageField.VALUE)),
+                            key=string_serializer(str(uuid4()), order_to_dict),
+                            value=json_serializer(order, SerializationContext(topic, MessageField.VALUE)),
                             on_delivery=delivery_report)
             break
     except KeyboardInterrupt:
