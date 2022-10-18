@@ -14,6 +14,9 @@
 
 3. Setup key (string) & value (json) schema in the confluent schema registr
 
+![Setup_Key(string) & Value(Json) Schema](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/Setup%20Key(string)%20&%20Value(JSON)%20Schema.JPG?raw=true)
+
+
 4. Write a kafka producer program (python or any other language) to read data records from restaurent data csv file, 
    make sure schema is not hardcoded in the producer code, read the latest version of schema and schema_str from schema registry and use it for
    data serialization.
