@@ -1,23 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-#
-# Copyright 2020 Confluent Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-
-# A simple example demonstrating use of JSONSerializer.
-
 import argparse
 from uuid import uuid4
 from six.moves import input
@@ -25,23 +5,20 @@ from confluent_kafka import Producer
 from confluent_kafka.serialization import StringSerializer, SerializationContext, MessageField
 from confluent_kafka.schema_registry import SchemaRegistryClient
 from confluent_kafka.schema_registry.json_schema import JSONSerializer
-#from confluent_kafka.schema_registry import *
 import pandas as pd
 from typing import List
 
-FILE_PATH = "\\Users\\sahee\\OneDrive\\Desktop\\Big Data Bootcamp\\Live Class notes\\11 - Oct 1 - Kafka Class 2\\cardekho_dataset.csv"
-columns=['car_name', 'brand', 'model', 'vehicle_age', 'km_driven', 'seller_type',
-       'fuel_type', 'transmission_type', 'mileage', 'engine', 'max_power',
-       'seats', 'selling_price']
+FILE_PATH = "\\Users\\sahee\\OneDrive\\Desktop\\Big Data Bootcamp\\Live Class notes\\11 - Oct 1 - Kafka Class 2\\Kafka - Assignment\\restaurant_orders.csv"
+columns=['order_number', 'order_date', 'item_name', 'quantity', 'product_price', 'total_products']
 
-API_KEY = 'BYG4CPH3CGGE75TV'
+API_KEY = 'FBB3BBFVI5WNJCIV'
 ENDPOINT_SCHEMA_URL  = 'https://psrc-6zww3.us-east-2.aws.confluent.cloud'
-API_SECRET_KEY = 'cErt9Db6/V/E+oE4RPd6iluvD/FKmPbG+EHVuycA30u+rISFDX8j4ktG7ucwtUZv'
+API_SECRET_KEY = 'JZSCc9nq292/9jICada9INoJSzpaxTSAQ4z3hx6EIe25hYdYl6Hswlmjv2S72fq1'
 BOOTSTRAP_SERVER = 'pkc-ymrq7.us-east-2.aws.confluent.cloud:9092'
 SECURITY_PROTOCOL = 'SASL_SSL'
 SSL_MACHENISM = 'PLAIN'
-SCHEMA_REGISTRY_API_KEY = 'MER254Z4NCADFU7A'
-SCHEMA_REGISTRY_API_SECRET = 'JO2sQs5q7nPGKos4qX/TgvOc4wogiI4NwZbo2UtpObv6YFyh7QZOXmsMU15m3s47'
+SCHEMA_REGISTRY_API_KEY = 'TQFPEIBCZLCJVGUK'
+SCHEMA_REGISTRY_API_SECRET = 'iyP0ADULQgoGnPiDKVs5xgUuxSvDcRod1oztDn6Gm2CA6eFY/or4KW0MRKd98z+v'
 
 
 def sasl_conf():
@@ -216,4 +193,4 @@ def main(topic):
     print("\nFlushing records...")
     producer.flush()
 
-main("test-topic-1")
+main("restaurant-take-away-data")
