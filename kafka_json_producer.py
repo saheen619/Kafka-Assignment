@@ -99,75 +99,14 @@ def delivery_report(err, msg):
 
 def main(topic):
 
-    schema_str = """
-    {
-  "$id": "http://example.com/myURI.schema.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "additionalProperties": false,
-  "description": "Sample schema to help you get started.",
-  "properties": {
-    "brand": {
-      "description": "The type(v) type is used.",
-      "type": "string"
-    },
-    "car_name": {
-      "description": "The type(v) type is used.",
-      "type": "string"
-    },
-    "engine": {
-      "description": "The type(v) type is used.",
-      "type": "number"
-    },
-    "fuel_type": {
-      "description": "The type(v) type is used.",
-      "type": "string"
-    },
-    "km_driven": {
-      "description": "The type(v) type is used.",
-      "type": "number"
-    },
-    "max_power": {
-      "description": "The type(v) type is used.",
-      "type": "number"
-    },
-    "mileage": {
-      "description": "The type(v) type is used.",
-      "type": "number"
-    },
-    "model": {
-      "description": "The type(v) type is used.",
-      "type": "string"
-    },
-    "seats": {
-      "description": "The type(v) type is used.",
-      "type": "number"
-    },
-    "seller_type": {
-      "description": "The type(v) type is used.",
-      "type": "string"
-    },
-    "selling_price": {
-      "description": "The type(v) type is used.",
-      "type": "number"
-    },
-    "transmission_type": {
-      "description": "The type(v) type is used.",
-      "type": "string"
-    },
-    "vehicle_age": {
-      "description": "The type(v) type is used.",
-      "type": "number"
-    }
-  },
-  "title": "SampleRecord",
-  "type": "object"
-}
-    """
+
     schema_registry_conf = schema_config()
     schema_registry_client = SchemaRegistryClient(schema_registry_conf)
 
+    custom_schema = schema_registry_client.get_latest_version(topic+'-value').schema.schema_str
+    
     string_serializer = StringSerializer('utf_8')
-    json_serializer = JSONSerializer(schema_str, schema_registry_client, order_to_dict)
+    json_serializer = JSONSerializer(custom_schema, schema_registry_client, order_to_dict)         #HARDCODE - schema_str
 
     producer = Producer(sasl_conf())
 
