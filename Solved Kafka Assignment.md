@@ -23,7 +23,9 @@
    
    https://github.com/saheen619/Kafka-Assignment/blob/main/kafka_json_producer.py
 
-5. From producer code, publish data in Kafka Topic one by one and use dynamic key while publishing the records into the Kafka Topic
+5. From producer code, publish data in Kafka Topic one by one and use dynamic key while publishing the records into the Kafka Topic.
+
+![Publish Data in Kafka Topic](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/Publish%20Data%20in%20Kafka%20Topic.JPG?raw=true)
 
 6. Write kafka consumer code and create two copies of same consumer code and save it with different names (kafka_consumer_1.py & kafka_consumer_2.py), 
    again make sure lates schema version and schema_str is not hardcoded in the consumer code, read it automatically from the schema registry to desrialize the data. 
