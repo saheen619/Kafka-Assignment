@@ -20,6 +20,8 @@
 4. Write a kafka producer program (python or any other language) to read data records from restaurent data csv file, 
    make sure schema is not hardcoded in the producer code, read the latest version of schema and schema_str from schema registry and use it for
    data serialization.
+   
+   https://github.com/saheen619/Kafka-Assignment/blob/main/kafka_json_producer.py
 
 5. From producer code, publish data in Kafka Topic one by one and use dynamic key while publishing the records into the Kafka Topic
 
