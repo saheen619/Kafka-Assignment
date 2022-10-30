@@ -60,3 +60,7 @@
    and append consumed records output.csv file
 
 ![consumed and created output.csv](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/Append%20Records%20in%20Output%20File.JPG?raw=true)
+
+The created output.csv file is as below:
+
+https://github.com/saheen619/Kafka-Assignment/blob/main/output.csv
