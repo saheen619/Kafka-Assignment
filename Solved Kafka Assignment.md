@@ -28,7 +28,7 @@
 ![Publish Data in Kafka Topic](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/Publish%20Data%20in%20Kafka%20Topic.JPG?raw=true)
 
 6. Write kafka consumer code and create two copies of same consumer code and save it with different names (kafka_consumer_1.py & kafka_consumer_2.py), 
-   again make sure lates schema version and schema_str is not hardcoded in the consumer code, read it automatically from the schema registry to desrialize the data. 
+   again make sure latest schema version and schema_str is not hardcoded in the consumer code, read it automatically from the schema registry to desrialize the data. 
    Now test two scenarios with your consumer code:
    
     a.) Use "group.id" property in consumer config for both consumers and mention different group_ids in kafka_consumer_1.py & kafka_consumer_2.py,
@@ -45,12 +45,16 @@
       The consumer lag dashboard in Kafka for group 2 while consumption in progress is as below:
         ![consumer_lag_g2](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/group2_consumer_lag.JPG?raw=true)
         
-      After execution of both consumer codes:
+      After execution of both consumer codes with DIFFERENT Group ID's:
         ![consumer_diff_groupid](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/Consumer_with_diff_group_id.JPG?raw=true)
         
     b.) Use "group.id" property in consumer config for both consumers and mention same group_ids in kafka_consumer_1.py & kafka_consumer_2.py,
         apply "earliest" offset property in both consumers and run these two consumers from two different terminals. Calculate how many records each consumer
         consumed and printed on the terminal
+        
+      After execution of both consumer codes with SAME Group ID's:
+        ![consumer_diff_groupid](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/Consumer_with_same_group_id.JPG?raw=true)
+
         
 7. Once above questions are done, write another kafka consumer to read data from kafka topic and from the consumer code create one csv file "output.csv"
    and append consumed records output.csv file
