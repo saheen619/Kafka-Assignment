@@ -1,6 +1,6 @@
 ## Title
 
-Assignment on Confluent Kafka as part of Big Data Bootcamp.
+Assignment on Confluent Kafka as part of Big Data Bootcamp. To see the solved assignment, run the file Solved Kafka Assignment.md or click on the link : https://github.com/saheen619/Kafka-Assignment/blob/main/Solved%20Kafka%20Assignment.md
 
 ## Objective
 
