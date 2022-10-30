@@ -53,8 +53,10 @@
         consumed and printed on the terminal
         
       After execution of both consumer codes with SAME Group ID's:
-        ![consumer_diff_groupid](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/Consumer_with_same_group_id.JPG?raw=true)
+        ![consumer_same_groupid](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/Consumer_with_same_group_id.JPG?raw=true)
 
         
 7. Once above questions are done, write another kafka consumer to read data from kafka topic and from the consumer code create one csv file "output.csv"
    and append consumed records output.csv file
+
+![consumed and created output.csv](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/Append%20Records%20in%20Output%20File.JPG?raw=true)
