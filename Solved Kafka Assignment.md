@@ -46,6 +46,7 @@
         ![consumer_lag_g2](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/group2_consumer_lag.JPG?raw=true)
         
       After execution of both consumer codes:
+        ![consumer_diff_groupid](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/Consumer_with_diff_group_id.JPG?raw=true)
         
     b.) Use "group.id" property in consumer config for both consumers and mention same group_ids in kafka_consumer_1.py & kafka_consumer_2.py,
         apply "earliest" offset property in both consumers and run these two consumers from two different terminals. Calculate how many records each consumer
