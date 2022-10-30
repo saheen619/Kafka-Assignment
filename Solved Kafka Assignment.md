@@ -36,13 +36,16 @@
         consumed and printed on the terminal
         
       The consumer codes with different group id's are below: 
-        https://github.com/saheen619/Kafka-Assignment/tree/main/Consumer%20Files%20-%20Different%20Group_id
+      
+      https://github.com/saheen619/Kafka-Assignment/tree/main/Consumer%20Files%20-%20Different%20Group_id
         
       The consumer lag dashboard in Kafka for group 1 while consumption in progress is as below:
-        ![Publish Data in Kafka Topic]([Screenshots/group2_consumer_lag.JPG](https://github.com/saheen619/Kafka-Assignment/blob/b69acf0f076fa8ff5fbea4150f0b27fc26d2923a/Screenshots/group2_consumer_lag.JPG))
+        ![consumer_lag_g1](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/group1_consumer_lag.JPG?raw=true)
         
       The consumer lag dashboard in Kafka for group 2 while consumption in progress is as below:
-        ![Publish Data in Kafka Topic](![image](https://user-images.githubusercontent.com/8330010/198872448-b8063ee9-ea06-4298-b42f-5c019253eda6.png))
+        ![consumer_lag_g2](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/group2_consumer_lag.JPG?raw=true)
+        
+      After execution of both consumer codes:
         
     b.) Use "group.id" property in consumer config for both consumers and mention same group_ids in kafka_consumer_1.py & kafka_consumer_2.py,
         apply "earliest" offset property in both consumers and run these two consumers from two different terminals. Calculate how many records each consumer
