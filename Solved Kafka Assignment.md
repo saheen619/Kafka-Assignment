@@ -35,7 +35,7 @@
         apply "earliest" offset property in both consumers and run these two consumers from two different terminals. Calculate how many records each consumer
         consumed and printed on the terminal
         
-      The consumer codes with different group id's are below: 
+      The consumer codes with DIFFERENT group id's are below: 
       
       https://github.com/saheen619/Kafka-Assignment/tree/main/Consumer%20Files%20-%20Different%20Group_id
         
@@ -51,6 +51,10 @@
     b.) Use "group.id" property in consumer config for both consumers and mention same group_ids in kafka_consumer_1.py & kafka_consumer_2.py,
         apply "earliest" offset property in both consumers and run these two consumers from two different terminals. Calculate how many records each consumer
         consumed and printed on the terminal
+        
+      The consumer codes with SAME group id's are below:
+      
+      https://github.com/saheen619/Kafka-Assignment/tree/main/Consumer%20Files%20-%20Same%20Group_id
         
       After execution of both consumer codes with SAME Group ID's:
         ![consumer_same_groupid](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/Consumer_with_same_group_id.JPG?raw=true)
