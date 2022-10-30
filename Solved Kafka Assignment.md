@@ -39,7 +39,7 @@
         https://github.com/saheen619/Kafka-Assignment/tree/main/Consumer%20Files%20-%20Different%20Group_id
         
       The consumer lag dashboard in Kafka for group 1 while consumption in progress is as below:
-        ![Publish Data in Kafka Topic]([https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/Publish%20Data%20in%20Kafka%20Topic.JPG?raw=true](https://github.com/saheen619/Kafka-Assignment/blob/main/Screenshots/group1_consumer_lag.JPG?raw=true))
+        ![Publish Data in Kafka Topic]([Screenshots/group2_consumer_lag.JPG](https://github.com/saheen619/Kafka-Assignment/blob/b69acf0f076fa8ff5fbea4150f0b27fc26d2923a/Screenshots/group2_consumer_lag.JPG))
         
       The consumer lag dashboard in Kafka for group 2 while consumption in progress is as below:
         ![Publish Data in Kafka Topic](![image](https://user-images.githubusercontent.com/8330010/198872448-b8063ee9-ea06-4298-b42f-5c019253eda6.png))
